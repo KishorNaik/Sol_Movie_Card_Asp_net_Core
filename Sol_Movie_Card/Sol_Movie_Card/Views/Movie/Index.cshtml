@@ -1,0 +1,17 @@
+﻿@model  Sol_Movie_Card.ViewModel.MovieViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<div class="container">
+
+    <div class="row">
+
+        @await Html.PartialAsync("~/Views/Movie/_MoviePartialView.cshtml", Model)
+
+    </div>
+
+</div>
+

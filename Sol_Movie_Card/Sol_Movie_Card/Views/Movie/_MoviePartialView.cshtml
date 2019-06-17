@@ -1,0 +1,33 @@
+﻿@model Sol_Movie_Card.ViewModel.MovieViewModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+
+@foreach (MovieModel movieModel in Model.MovieList)
+{
+    <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4">
+
+        <div class="card m-3">
+            <img class="card-img-top" src="@movieModel.Url" alt="Card image cap" height="400px">
+
+            <div style="background-color:black; height:40px">
+                <center>
+                    <h5 class="card-title" style="color:white;line-height:40px">@movieModel.Title</h5>
+                </center>
+                
+            </div>
+
+            <div class="card-body">
+
+                <p class="card-text">
+                    @movieModel.Details
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+}
+
